@@ -1,0 +1,277 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAROON</title>
+    <link rel="stylesheet" href="" type="image/x-icon">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlay">
+        <div class="popup">
+            <h2>Добро пожаловать на сайт MAROON</h2>
+            <button class="close over" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';">Продолжить</button>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="header__logo">
+                <img src="vectors\MAROONvectors.svg" alt="" class="logo">
+            </a>
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#1" class="menu__link">Каталог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#2" class="menu__link">О нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#3" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+            <div class="block1">
+                <div class="card_one">
+                    <img src="img\Rectangle 5img.png" alt="" class="mnb">
+                    <div class="text">
+                        <a href="">Уход для лица</a>
+                        <img src="vectors\Vector 1vectors.svg" alt="">
+                    </div>
+                </div>
+                <div class="info">
+                    <h1>MAROON</h1>
+                    <p>Натуральная косметика для бережного ухода за кожей</p>
+                    <button>Подробнее</button>
+                </div>
+                <div class="card_two">
+                    <img src="img\Rectangle 6img.png" alt=""class="mnb">
+                    <div class="text">
+                        <a href="">Уход для лица</a>
+                        <img src="vectors\Vector 1vectors.svg" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container" id="1">
+        <!-- Основной блок слайдера -->
+        <div class="slider">
+
+            <!-- Первый слайд -->
+            <div class="item">
+            <img src="img\2293486 1img.png">
+            </div>
+        
+            <!-- Второй слайд -->
+            <div class="item">
+            <img src="img\2693637 1img.png">
+            </div>
+        
+            <!-- Третий слайд -->
+            <div class="item">
+            <img src="img\2693661 1img.png">
+            </div>
+        
+            <!-- Кнопки-стрелочки -->
+            <div class="ah">
+                <a class="previous" onclick="previousSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block3">
+            <div class="we">
+                <div class="gelka">
+                    <img src="gel.jpg" alt="">
+                </div>
+                <div class="col">
+                    <h2>Встречайте весну вместе с нами</h2>
+                    <p>Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой</p>
+                    <button>Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="sliderFlex">
+        <!-- Control buttons -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Все средства</button>
+            <button class="btn" onclick="filterSelection('och')"> Очищение</button>
+            <button class="btn" onclick="filterSelection('ton')"> Тонизирование</button>
+            <button class="btn" onclick="filterSelection('uvl')"> Увлажнение</button>
+            <button class="btn" onclick="filterSelection('pit')"> Питание</button>
+        </div>
+    </div>
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div class="container" id="filtersItems">
+        <div class="filterDiv och">Пенки </div>
+        <div class="filterDiv pit">Масла</div>
+        <div class="filterDiv ton">Тоники</div>
+        <div class="filterDiv ton">Лосьоны</div>
+        <div class="filterDiv uvl">Маски</div>
+    </div>
+        <div class="container">
+        <div class="block4">
+            <div class="part_one">
+                <h2>Индивидуальный уход</h2>
+                <p>Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты 
+                    с разными средствами только ухудшают ее качество.</p>
+                <p id="p">Заполните анкету, и мы подберем уход, подходящий именно вам, 
+                    учитывая ваш образ жизни, место жительства и другие факторы. </p>
+                <button>Заполнить анкету</button>
+            </div>
+            <div class="part_two">
+                <img src="img\Rectangle 38img.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block5" id="2">
+            <div class="tabs">
+                <div class="tabs__nav">
+                    <button class="tabs__nav-btn" type="button" data-tab="#tab_1">INSTAGRAM</button>
+                    <button class="tabs__nav-btn" type="button" data-tab="#tab_2">VK</button>
+                    <button class="tabs__nav-btn" type="button" data-tab="#tab_3">TWITTER</button>
+                </div>
+                <div class="tabs__content">
+                    <div class="tabs__item" id="tab_1">
+                        <h2>“Мы стремимся сделать уход за кожей доступным
+                            и приятным ритуалом для всех, кто хочет
+                            заботиться о себе и своем теле. Более подробно об этом в нашем инстаграме @maroon”  
+                        </h2>
+                        <button>Наша история</button>
+                    </div>
+        
+                    <div class="tabs__item" id="tab_2">
+                        <h2>“Мы стараемся сделать процедуру ухода за кожей 
+                            приятной и доступной для всех, кто хочет заботиться 
+                            о своем теле. Больше информации о нашей концепции вы 
+                            можете найти в нашем профиле VK </br>@maroon.”  
+                        </h2>
+                        <button>Наша история</button>
+                    </div>
+        
+                    <div class="tabs__item" id="tab_3">
+                        <h2>“Мы стараемся сделать заботу о коже простым и 
+                            приятным ритуалом для всех, кто ценит здоровье и 
+                            красоту своего тела. Более подробную информацию можно 
+                            найти на нашем аккаунте в Twitter</br> @maroon.”  
+                        </h2>
+                        <button>Наша история</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block6">
+            <div class="left">
+                <img src="img\2293486 1img.png" alt="">
+                <img src="img\2993554 1img.png" alt="">
+                <img src="img\2693638 2img.png" alt="">
+                <img src="img\3397879 1img.png" alt="">
+                <img src="img\2693637 1img.png" alt="">
+                <img src="img\2693661 1img.png" alt="">
+            </div>
+            <div class="right">
+                <h2>Присоединяйтесь к нам</h2>
+                <p>Подпишитесь на наш аккаунт @marooncare
+                    и узнавайте о новиках и акциях первыми</p>
+                <button>Подписаться</button>
+            </div>
+        </div>
+
+
+
+        <div class="box">
+            <div class="label">Как до нас добраться?</div>
+            <div class="content">
+                <p>
+                    Выходишь из метро Люблино на первый выход и поворачиваешь направо.
+                    Проходишь прямо до первого перекрестка.
+                    На перекрестке поворачиваешь налево и идешь прямо до следующего перекрестка.
+                    На следующем перекрестке поворачиваешь направо и проходишь вдоль здания.
+                    Перед зданием поворачиваешь налево и идешь по улице до конца.
+                    В конце улицы поворачиваешь направо и проходишь до следующего перекрестка.
+                    На перекрестке поворачиваешь направо и идешь до магазина косметики.
+                    Магазин находится на углу улицы.
+                </p>
+            </div>
+        </div>
+    
+
+
+
+        <div class="block7" id="3">
+            <div class="p_one">
+                <h2>Контакты</h2>
+                <div class="ad">
+                    <h3>Адрес</h3>
+                    <p>Санкт-Петербург, ул. Большая Конюшенная, 19</p>
+                </div>
+                <div class="tel">
+                    <h3>Телефон</h3>
+                    <p>+7 (923) 888-90-60</p>
+                </div>
+                <div class="mail">
+                    <h3>E-mail</h3>
+                    <p>info@maroon.ru</p>
+                </div>
+                <div class="ic">
+                    <img src="vectors\Vectorvectors.svg" alt="">
+                    <img src="vectors\Vectorvectors-1.svg" alt="">
+                    <img src="vectors\Vectorvectors-2.svg" alt="">
+                </div>
+            </div>
+            <div class="p_two">
+                <img src="img\mapimg.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="block8">
+        <div class="container">
+            <div class="side_one">
+                <img src="vectors\MAROONvectors.svg" alt="">
+                <a href="">Каталог</a>
+                <a href="">О нас</a>
+                <a href="">Магазины</a>
+                <a href="">Контакты</a>
+            </div>
+            <div class="side_two">
+                <img src="vectors\Vectorvectors.svg" alt="">
+                <img src="vectors\Vectorvectors-1.svg" alt="">
+                <img src="vectors\Vectorvectors-2.svg" alt="">
+            </div>  
+        </div>
+    </div>
+    <div class="block9">
+        <div class="container">
+            <div class="s_one">
+                <p>Maroon© </p>
+                <p> 2020 Все права защищены</p>
+            </div>
+            <div class="s_two">
+                <p>Политика конфиденциальности</p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

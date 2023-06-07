@@ -1,0 +1,1167 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+
+/* Слайдер: */
+.slider{
+  max-width:100%;
+  /* Положение элемента устанавливается относительно его исходной позиции: */
+  position: relative;
+  /* Центрируем по горизонтали: */
+  height: 300px;
+}
+
+.container .slider{
+  margin-bottom: 140px;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider .item img {
+  /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+/* Кнопки назад и вперёд: */
+.slider .previous, .slider .next {
+  /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+  cursor: pointer;
+  /* Положение элемента задаётся относительно границ браузера: */
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  /* Оформление самих кнопок: */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  /* Плавное появление фона при наведении курсора: */
+  transition: 0.6s ease;
+  /* Скругление границ: */
+  border-radius: 0 3px 3px 0;
+}
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider .previous:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+.slider .item {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  /* Устанавливаем и изменяем степень прозрачности: */
+  from {
+      opacity: 0.4
+  }
+  to {
+      opacity: 1
+  }
+}
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.filters__list {
+  text-align: center;
+  margin-top: 140px;
+}
+.filters__list .filters h2 {
+  color: #000;
+}
+.filters__list .list div {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.filter-option {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+  margin: 30px 0px;
+}
+
+
+.filterDiv {
+  float: left;
+  border: 1px solid #B3BAC1;
+  border-radius: 2px;
+  background-color: none;
+  color: #000;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #122947;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+
+
+#myBtnContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+}
+
+button.btn.active{
+  background-color: #B3BAC1;  
+}
+
+#filtersItems{
+  padding-bottom: 140px;
+}
+
+#sliderFlex{
+  padding-top: 140px;
+  margin-bottom: 20px;
+}
+
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+background-color: #666;
+color: white;
+}
+
+
+
+
+.header {
+  padding: 30px 0;
+}
+
+.box {
+  margin: 140px 0px;
+}
+
+.box .label {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 20px; /* Внутренний отступ для видимой части */
+  background-color: none; /* Цвет элемента аккордеона */
+  color: #000; /* Цвет шрифта элемента аккордеона */
+  cursor: pointer; /* Меняем курсор при наведении */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container .box .label::after {
+  content: "+"; /* Задаем иконку "+" для элемента аккордеона */
+  position: absolute;
+  top: 50%; /* Выравнивание по центру */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.container .box.active .label::after {
+  content: "—"; /* Меняем иконку на "-" при нажатии на элемент */
+}
+
+.container .box .content {
+  position: relative;
+  background-color: #fff; /* Цвет фона контента */
+  overflow: hidden;
+  max-height: 0; /* Скрываем контент */
+  -webkit-transition: 0.3s;
+  transition: 0.3s; /* Для плавности анимации */
+}
+
+.container .box .content p {
+  padding: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 145%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.menu__icon {
+  display: block;
+  width: 50px;
+  height: 34px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+.menu__icon span {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.menu__icon span:first-child {
+  top: 0;
+}
+.menu__icon span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.menu__icon.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.menu__icon.active span:first-child {
+  top: calc(50% - 1px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.menu__icon.active span:last-child {
+  bottom: calc(50% - 1px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.menu__body {
+  position: absolute;
+  top: 0;
+  left: -200%;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.menu__body.active {
+  left: 0;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+.menu__item a {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 100px;
+}
+.menu__item a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.tabs {
+  padding: 77px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs__nav-btn {
+  padding: 10px 40px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: 0.06em;
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 0px;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.tabs__nav-btn:last-child {
+  border-right: none;
+}
+
+.tabs__nav-btn:hover {
+  background-color: #ddd;
+}
+
+.tabs__nav-btn.active {
+  background-color: none;
+  border: 1px solid #B3BAC1;
+  border-right-color: #B3BAC1;
+  color: #000;
+}
+
+.tabs__content {
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.tabs__item {
+  display: none;
+  text-align: center;
+}
+
+.tabs__item.active {
+  display: block;
+}
+
+#overlay {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 999;
+  -webkit-animation: fade 0.6s;
+  animation: fade 0.6s;
+  overflow: auto;
+}
+#overlay .popup {
+  color: #fff;
+  padding: 50px;
+}
+#overlay .popup h2 {
+  margin: 0px 0px 30px 0px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+  font-family: "Raleway";
+}
+
+
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ashki a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #122947;
+  text-decoration: none;
+}
+
+.ashki {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#pad {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#one {
+  padding-right: 30px;
+  padding-left: 51px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #122947;
+}
+
+.info p {
+  max-width: 274px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 145%;
+  color: #122947;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #122947;
+  text-decoration: none;
+}
+
+.text {
+  max-width: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+}
+
+.block1 {
+  font-family: "Raleway";
+  margin-bottom: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info button {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+}
+
+/* Block 2 slide */
+.swiper-slide {
+  text-align: center;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-slide img {
+  width: 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 140px !important;
+  left: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 140px !important;
+  right: auto;
+}
+
+/*Блок 3*/
+.block3 {
+  background: url(banner.jpg) no-repeat;
+  max-height: 400px;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Raleway";
+}
+
+.block3 h2 {
+  margin-top: 81px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #122947;
+  max-width: 284px;
+}
+
+.block3 p {
+  max-width: 284px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 145%;
+  color: #122947;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.block3 button {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+  margin-bottom: 81px;
+}
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  grid-column-start: 3;
+}
+
+.we {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+}
+.we .gelka {
+  grid-column-start: 1;
+  display: flex;
+  align-items: center;
+}
+
+.gel img{
+  grid-column-start: 1;
+  margin: auto;
+}
+
+/*Block 4*/
+.block4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 206px;
+  margin-bottom: 206px;
+}
+
+.part_one{
+  margin-right: 20px;
+}
+
+.part_one h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #122947;
+  margin-bottom: 40px;
+}
+
+.part_one p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #122947;
+  max-width: 329px;
+  line-height: 145%;
+}
+
+#p {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+.part_one button {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+}
+
+/*Block 5*/
+button {
+  cursor: pointer;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #fff;
+  font-family: "Raleway";
+}
+
+.block5 {
+  height: 433px;
+  font-family: "Raleway";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 260px;
+}
+
+.block5 h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #122947;
+  max-width: 761px;
+  text-align: center;
+}
+
+.block5 button {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+  margin-top: 50px;
+}
+
+/* Block6 */
+.block6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 206px;
+}
+
+.right{
+  margin-left: 20px;
+}
+
+.right h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #122947;
+}
+
+.right p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #122947;
+  line-height: 145%;
+  max-width: 381px;
+  margin-top: 30px;
+}
+
+.over {
+  padding: 13px 27px 13px 27px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.right button {
+  padding: 13px 27px 13px 27px;
+  border-color: #B3BAC1;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122947;
+  margin-top: 40px;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Block7 */
+.block7 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 206px;
+}
+
+.p_one h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #122947;
+  margin-bottom: 40px;
+}
+
+.p_one h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 145%;
+  color: #122947;
+}
+
+.p_one p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #122947;
+  line-height: 145%;
+  max-width: 256px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.p_one .ic img {
+  margin-right: 30px;
+}
+
+/* Block8 */
+.block8 {
+  background-color: #F4F1ED;
+  font-family: "Raleway";
+  padding-bottom: 20px;
+}
+
+.block8 .container, .block9 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.side_one a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #122947;
+  text-decoration: none;
+  margin-left: 70px;
+}
+
+.side_two  {
+  display: flex;
+  gap: 20px;
+}
+
+.side_one {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Block9*/
+.block9 {
+  background-color: #F4F1ED;
+  font-family: "Raleway";
+  border-top: 2px solid #D1D1D1;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.s_one p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #959595;
+}
+
+.s_two p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #959595;
+}
+
+.s_one img {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.s_one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+@media only screen and (max-width: 1135px){
+  .block4{
+    flex-direction: column;
+  }
+  .part_one{
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .part_one p{
+    margin: auto;
+  }
+  .part_two img{
+    width: 100%;
+  }
+
+
+  .block6{
+    flex-direction: column;
+  }
+  .right{
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+  }
+  .left img{
+    width: 100%;
+  }
+
+  .block7{
+    flex-direction: column;
+  }
+  .p_one{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .p_one h2{
+    width: 100%;
+  }
+  
+  .p_one p{
+    max-width: 100%;
+  }
+  .block1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .slider .item{
+    width: 100%;
+  }
+  .slider .next, .slider .previous{
+    position: static;
+    color: #000;
+    padding: 0px;
+  }
+
+  .block8 .container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block8 .container .side_one{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .block8 .container .side_one a{
+    margin: 0;
+  }
+
+  .p_two img{
+    width: 100%;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 720px){
+  .menu__item a{
+    font-size: 20px;
+  }
+  .block1 .mnb, .gelka img{
+    width: 100%;
+  }
+  .info{
+    margin: 0;
+  }
+  .we{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .col{
+    align-items: center;
+    text-align: center;
+  }
+  .block3{
+    margin-top: 10px;
+  }
+  .col button{
+    margin-bottom: 20px;
+  }
+  .container .slider{
+    margin-bottom: 0px;
+  }
+  .block3{
+    margin-bottom: 300px;
+  }
+  .block5 h2{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .tabs__nav{
+    display: flex;
+    flex-direction: column;
+  }
+  .block5 button{
+    border: none;
+  }
+  .part_one h2, .block3 h2, .right h2{
+    font-size: 20px;
+  }
+}
